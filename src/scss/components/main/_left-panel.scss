@@ -1,0 +1,43 @@
+@use "./utils/variables.scss" as *;
+
+.left-panel {
+  display: none;
+  @media (min-width: $bp-laptop) {
+    display: flex;
+    position: absolute;
+    z-index: 110;
+    left: 65px;
+    padding: 37px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    @media (min-width: $bp-desktop) {
+      padding: 37px 0 75px 0;
+      left: 63px;
+    }
+  }
+  &__text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.69em;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin: 0;
+  }
+  &__line {
+    height: 154px;
+    opacity: 0.25;
+    transform: rotate(180deg);
+    margin: 0;
+  }
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+  }
+}

@@ -1,0 +1,13 @@
+@use "./utils/variables.scss" as *;
+@use "./fonts.scss";
+@use "./base.scss";
+
+@use "./components/_header.scss";
+
+@use "./components/_form.scss" as *;
+@use "./components/_menu.scss" as *;
+
+@use "./components/main/_left-panel.scss" as *;
+@use "./components/main/_hero.scss";
+@use "./components/main/_about.scss";
+@use "./components/main/swiperMain.scss";

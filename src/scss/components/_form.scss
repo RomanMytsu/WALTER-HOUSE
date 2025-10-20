@@ -1,0 +1,127 @@
+@use "../utils/variables.scss" as *;
+.main-form-wrapper {
+  @media (min-width: $bp-laptop) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.form {
+  width: 100%;
+  padding: 45px 40px 55px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 17px;
+  background: #fff;
+  @media (min-width: $bp-tablet) {
+    padding: 90px 124.5px 96px 124.5px;
+    gap: 27px;
+  }
+  @media (min-width: $bp-laptop) {
+    width: 540px;
+    height: 250px;
+    padding: 37px 30px 30px 30px;
+    gap: 6px;
+  }
+  @media (min-width: $bp-desktop) {
+    width: 740px;
+    height: 380px;
+    padding: 87px 120px 80px 120px;
+    gap: 15px;
+  }
+  &__input {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    @media (min-width: $bp-tablet) {
+      max-width: 700px;
+    }
+    @media (min-width: $bp-laptop) {
+      max-width: none;
+    }
+    input {
+      border: none;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      color: #000;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      @media (min-width: $bp-tablet) {
+        padding: 18px 0;
+        font-size: 18px;
+      }
+      @media (min-width: $bp-laptop) {
+        max-width: none;
+        padding: 16px 0;
+        font-size: 16px;
+      }
+      @media (min-width: $bp-desktop) {
+        font-size: 18px;
+        font-family: "OpenSans";
+      }
+
+      transition: all 0.5s ease;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+        @media (min-width: $bp-tablet) {
+          font-size: 18px;
+        }
+        @media (min-width: $bp-laptop) {
+          font-size: 16px;
+        }
+        @media (min-width: $bp-desktop) {
+          font-size: 18px;
+        }
+      }
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid #ffac30;
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: #ffac30;
+    text-align: left;
+    @media (min-width: $bp-tablet) {
+      justify-content: space-between;
+      gap: 25px;
+      font-size: 20px;
+      margin-top: 25px;
+    }
+    @media (min-width: $bp-laptop) {
+      width: 100%;
+      gap: 0;
+      margin-top: 23px;
+      svg {
+        width: 100px;
+        height: 22px;
+        flex-grow: 0;
+        @media (min-width: $bp-desktop) {
+          width: 112px;
+        }
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 15px;
+      margin-top: 34px;
+      font-family: "OpenSans";
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "./utils/variables.scss" as *;
+.swiper-main {
+  @media (min-width: $bp-laptop) {
+    width: 100%;
+    height: 100vh;
+
+    .swiper-slide {
+      pointer-events: none;
+      z-index: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    .swiper-slide.swiper-slide-active {
+      pointer-events: auto;
+      z-index: 2;
+    }
+  }
+  @media (max-width: 1439px) {
+    .swiper-wrapper {
+      display: block !important;
+    }
+    .swiper-slide {
+      height: auto !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.swiper-pagination-main {
+  display: none;
+  @media (min-width: $bp-laptop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+    z-index: 92;
+    position: absolute;
+    right: 115px !important;
+    top: calc(388px / 1080px * 100%) !important;
+    // top: 412px !important;
+    transform: translateY(-50%);
+
+    .swiper-pagination-bullet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      cursor: pointer;
+      margin: 0 !important;
+      background: none !important;
+      opacity: 1 !important;
+      width: auto !important;
+      height: auto !important;
+
+      svg {
+        width: 7px;
+        height: 7px;
+      }
+    }
+    .pagination-icon.active {
+      display: none;
+    }
+    .swiper-pagination-bullet-active .pagination-icon {
+      &.default {
+        display: none;
+      }
+      &.active {
+        display: block;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+

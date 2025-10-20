@@ -1,0 +1,100 @@
+@use "./utils/variables.scss" as *;
+
+.hero {
+  width: 100%;
+  min-height: 480px;
+  background-image: linear-gradient(102.76deg, rgba(0, 0, 0, 0.45)),
+    url(../img/hero/bg-hero-mob.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (min-width: $bp-tablet) {
+    background-image: linear-gradient(102.76deg, rgba(0, 0, 0, 0.45)),
+      url(../img/hero/bg-hero-tab.webp);
+    min-height: 576px;
+  }
+  @media (min-width: $bp-laptop) {
+    background-image: linear-gradient(102.76deg, rgba(0, 0, 0, 0.45)),
+      url(../img/hero/bg-hero-desk.webp);
+    height: 100vh;
+  }
+  &__text {
+    padding-top: 106px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    @media (min-width: $bp-tablet) {
+      padding-top: 137px;
+      gap: 90px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 268px 0 0 218px;
+      justify-content: start;
+      align-items: stretch;
+      gap: 0;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 366px 0 0 318px;
+    }
+  }
+  &__text-slogan {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.69em;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    @media (min-width: $bp-laptop) {
+      display: none;
+    }
+  }
+  &__text-title-wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    width: 310px;
+    @media (min-width: $bp-tablet) {
+      width: 680px;
+    }
+    @media (min-width: $bp-laptop) {
+      width: 614px;
+    }
+    h1 {
+      font-family: "BrunoAceSC", sans-serif;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 0.8;
+      text-transform: uppercase;
+      color: #fff;
+      @media (min-width: $bp-tablet) {
+        font-size: 96px;
+        line-height: 0.85;
+      }
+    }
+    .hero__title-house {
+      margin: 0 5px 0 auto;
+      @media (min-width: $bp-tablet) {
+        margin: 0 61px 0 auto;
+      }
+      @media (min-width: $bp-laptop) {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+  &__subtitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.72;
+    letter-spacing: 0.52em;
+    text-transform: uppercase;
+    color: #fff;
+    @media (min-width: $bp-tablet) {
+      font-size: 16px;
+    }
+  }
+}

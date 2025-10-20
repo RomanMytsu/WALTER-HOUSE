@@ -1,0 +1,103 @@
+@use "../utils/variables.scss" as *;
+
+.header {
+  z-index: 105;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding-top: 10px;
+  @media (min-width: $bp-laptop) {
+    padding: 20px 178px 0 178px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 0;
+    @media (min-width: $bp-tablet) {
+      padding: 0 20px 0 10px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0;
+    }
+  }
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 22px;
+    @media (min-width: $bp-tablet) {
+      gap: 42px;
+    }
+    @media (min-width: $bp-laptop) {
+      gap: 127px;
+    }
+  }
+  &__logo-link {
+    @media (min-width: $bp-laptop) {
+      display: none;
+    }
+  }
+  &__menu-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  &__tel {
+    display: none;
+    @media (min-width: $bp-laptop) {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      color: #fff;
+    }
+  }
+  &__call {
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 47px;
+      @media (min-width: $bp-desktop) {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__call-text {
+    display: none;
+    @media (min-width: $bp-tablet) {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: right;
+      color: #ffac30;
+    }
+  }
+  &__call-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  &__call-icon {
+    @media (min-width: $bp-tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &__line {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 100%;
+    margin: 9px 0 0;
+    @media (min-width: $bp-laptop) {
+      margin: 19px 0 0;
+    }
+  }
+}

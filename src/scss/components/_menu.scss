@@ -1,0 +1,281 @@
+@use "../utils/variables.scss" as *;
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  backdrop-filter: blur(60px);
+  background: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100dvh;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  @media (min-width: $bp-laptop) {
+    justify-content: center;
+  }
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &__list {
+    margin-top: 80px;
+    width: 100%;
+    @media (min-width: $bp-tablet) {
+      margin-top: 100px;
+    }
+    @media (min-width: $bp-laptop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      margin-top: 0;
+      width: auto;
+      height: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 0;
+    @media (min-width: $bp-tablet) {
+      padding: 60px 0;
+    }
+    @media (min-width: $bp-laptop) {
+      position: relative;
+      flex-direction: row;
+      justify-content: center;
+      width: 220px;
+      height: 250px;
+      padding: 0 30px;
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transition: opacity 0.3s ease;
+      }
+      &:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transition: opacity 0.3s ease;
+      }
+      &:hover {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.15);
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      width: 320px;
+      padding: 0 60px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 2px solid transparent;
+      background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, 0) 100%
+        )
+        no-repeat bottom;
+      background-size: 100% 2px;
+      @media (min-width: $bp-laptop) {
+        border-bottom: 0;
+        background: 0 0;
+      }
+    }
+    &:last-child {
+      display: none;
+      @media (min-width: $bp-tablet) {
+        display: flex;
+      }
+    }
+  }
+  &__item-link {
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    transition: color 0.4s ease;
+    &:hover {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    @media (min-width: $bp-tablet) {
+      font-size: 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      &::after {
+        content: "→";
+        position: absolute;
+        right: 42%;
+        top: 78%;
+        opacity: 0;
+        transform: translateX(-5px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+    background: #fff;
+    width: 100%;
+    @media (min-width: $bp-tablet) {
+      align-items: start;
+    }
+    @media (min-width: $bp-laptop) {
+      width: 77%;
+    }
+    @media (min-width: $bp-desktop) {
+      width: 81.5%;
+    }
+  }
+  &__info-top {
+    img {
+      display: none;
+      @media (min-width: $bp-tablet) {
+        display: block;
+        width: 110px;
+        height: 61px;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 36px 33px 26px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 62px;
+      padding: 50px 55px 36px;
+    }
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 54px 55px 49px;
+      gap: 64px;
+    }
+  }
+  &__info-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 19px;
+    @media (min-width: $bp-tablet) {
+      gap: 22px;
+      align-items: flex-start;
+    }
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 76px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__info-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.69em;
+    text-transform: uppercase;
+    color: #000;
+    @media (min-width: $bp-tablet) {
+      font-size: 24px;
+    }
+  }
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    gap: 27px;
+    padding: 46px 33px 48px 0;
+    @media (min-width: $bp-tablet) {
+      padding: 24px 0 58px 88px;
+      gap: 29px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 34px 55px 58px;
+      flex-direction: row;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 34px 55px 42px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__info-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    @media (min-width: $bp-tablet) {
+      gap: 33px;
+    }
+    @media (min-width: $bp-laptop) {
+      gap: 20px;
+    }
+    @media (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+  &__info-item-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #000;
+    @media (min-width: $bp-tablet) {
+      font-size: 18px;
+      line-height: 1.67;
+      br {
+        display: none;
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 15px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 18px;
+    }
+  }
+}

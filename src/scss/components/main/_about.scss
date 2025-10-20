@@ -1,0 +1,127 @@
+@use "./utils/variables.scss" as *;
+.about {
+  display: none;
+  @media (min-width: $bp-laptop) {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)),
+      url("../img/about/about-bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+  }
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    padding-top: calc(229px / 1920px * 100%);
+  }
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+  &__content-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 420px;
+    height: 150px;
+    @media (min-width: $bp-desktop) {
+      width: 520px;
+      height: 250px;
+    }
+
+    &:not(:last-child) {
+      margin-top: 28px;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transition: opacity 0.3s ease;
+    }
+
+    &:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transition: opacity 0.3s ease;
+    }
+  }
+  &__item-num {
+    font-family: "BrunoAce", sans-serif;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 1.09;
+    text-align: center;
+    color: #fff;
+    @media (min-width: $bp-desktop) {
+      font-size: 64px;
+    }
+  }
+  &__item-text {
+    font-weight: 400;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    @media (min-width: $bp-desktop) {
+      font-size: 30px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    left: calc(386px / 1920px * 100%);
+    bottom: calc(158px / 1920px * 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
