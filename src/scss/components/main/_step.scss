@@ -1,0 +1,212 @@
+@use "./utils/variables.scss" as *;
+
+.step {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/step/step-bg-mob.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 20px 53px;
+  @media (min-width: $bp-tablet) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/step/step-bg-tab.webp");
+    min-height: 720px;
+    padding: 50px 134px 69px;
+    gap: 45px;
+  }
+  @media (min-width: $bp-laptop) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/step/step-bg-desk.webp");
+    min-height: auto;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+  }
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      font-size: 18px;
+      padding: 0;
+    }
+    @media (min-width: $bp-laptop) {
+      position: absolute;
+      width: 326px;
+      top: calc(307px / 1080px * 100%);
+      left: calc(602px / 1920px * 100%);
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $bp-tablet) {
+      gap: 20px;
+    }
+    @media (min-width: $bp-laptop) {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // width: 75%;
+      top: calc(335px / 1080px * 100%);
+      left: calc(283px / 1920px * 100%);
+      gap: calc(150px / 1920px * 100%);
+    }
+    // @media (min-width: $bp-desktop) {
+    //   width: 100%;
+    // }
+  }
+
+  &__content-svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-family: "BrunoAce", sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1.75;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      padding: 76px;
+      @media (min-width: $bp-tablet) {
+        font-size: 64px;
+        line-height: 1.09;
+        padding: 95px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 2%;
+        width: 100%;
+        height: 100%;
+        background: url("../img/step/circle-step.svg") no-repeat center /
+          contain;
+        @media (min-width: $bp-tablet) {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__content-variant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    @media (min-width: $bp-tablet) {
+      gap: 10px;
+    }
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      gap: calc(108px / 1920px * 100%);
+    }
+    @media (min-width: $bp-desktop) {
+      gap: calc(221px / 1920px * 100%);
+    }
+  }
+
+  &__content-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @media (min-width: $bp-tablet) {
+      gap: 27px;
+
+      svg {
+        width: 75px;
+        height: 92px;
+        flex-shrink: 0;
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      gap: 15px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: calc(260px / 1920px * 100%);
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      @media (min-width: $bp-tablet) {
+        font-size: 36px;
+      }
+      @media (min-width: $bp-laptop) {
+        width: 243px;
+        text-align: left;
+      }
+      @media (min-width: $bp-desktop) {
+        width: 303px;
+      }
+    }
+  }
+
+  &__content-text-wrapper {
+    svg {
+      display: none;
+      @media (min-width: $bp-laptop) {
+        display: block;
+        flex-shrink: 0;
+      }
+    }
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.29;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      @media (min-width: $bp-tablet) {
+        font-size: 18px;
+        line-height: 1.67;
+      }
+      @media (min-width: $bp-laptop) {
+        text-align: left;
+				width: 460px;
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      // max-width: 400px;
+      gap: calc(78px / 1920px * 100%);
+    }
+    @media (min-width: $bp-desktop) {
+      // max-width: 500px;
+      gap: calc(288px / 1920px * 100%);
+    }
+  }
+}

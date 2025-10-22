@@ -22,6 +22,7 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.svg, svgSprive);
 }
 
 const fonts = gulp.series(ttfToWoff, fontsStyle);

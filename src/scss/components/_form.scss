@@ -1,12 +1,18 @@
 @use "../utils/variables.scss" as *;
 .main-form-wrapper {
+  
   @media (min-width: $bp-laptop) {
     position: fixed;
     bottom: 0;
     right: 0;
   }
 }
-
+.desk-form {
+  display: none;
+  @media (min-width: $bp-laptop) {
+    display: block;
+  }
+}
 .form {
   width: 100%;
   padding: 45px 40px 55px 40px;
