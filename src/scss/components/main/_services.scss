@@ -1,0 +1,596 @@
+@use "./utils/variables.scss" as *;
+
+.services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (min-width: $bp-laptop) {
+    background-image: url("../img/services/services-bg-desk.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  &__list {
+    display: grid;
+    width: 100%;
+    height: 740px;
+    overflow: hidden;
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 382px;
+      height: auto;
+    }
+    @media (min-width: $bp-laptop) {
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      align-self: center;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-right: 200px;
+    }
+
+    &.open {
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &__item-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../img/services/video.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: $bp-tablet) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin-top: 150px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      width: 420px;
+      height: 700px;
+      margin-top: 0;
+    }
+  }
+  &__item-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../img/services/furniture.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: $bp-tablet) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin-top: 340px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      width: 360px;
+      height: 360px;
+    }
+  }
+  &__item-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../img/services/kitchen.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: $bp-tablet) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      margin-left: 200px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      width: 380px;
+      height: 380px;
+    }
+  }
+  &__item-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../img/services/fire.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: $bp-tablet) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      position: relative;
+      width: 120px;
+      height: 180px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      width: 320px;
+      height: 280px;
+    }
+  }
+  &__item-5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../img/services/camera.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: $bp-tablet) {
+      position: relative;
+      grid-column: 1/ -1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      position: relative;
+      width: 380px;
+      height: 320px;
+      margin-top: 230px;
+      margin-left: 30px;
+      grid-column: auto;
+      order: -1;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      width: 580px;
+      height: 520px;
+      margin-top: 180px;
+      margin-left: 0px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    padding: 0 66px;
+
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      @media (min-width: $bp-tablet) {
+        font-size: 30px;
+        line-height: 1.33;
+      }
+      @media (min-width: $bp-laptop) {
+        display: none;
+      }
+    }
+    @media (min-width: $bp-tablet) {
+      height: 100%;
+      padding: 0 79px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 85px;
+      &:hover {
+        p {
+          display: block;
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  //   &__title {
+  //     font-weight: 600;
+  //     font-size: 24px;
+  //     line-height: 1.25;
+  //     text-transform: uppercase;
+  //     text-align: center;
+  //     color: #fff;
+  //     @media (min-width: $bp-tablet) {
+  //       font-size: 30px;
+  //       line-height: 1.33;
+  //     }
+  //     @media (min-width: $bp-laptop) {
+  //       display: none;
+  //       &:hover {
+  //         display: block;
+  //       }
+  //     }
+  //   }
+
+  &__btn-mob {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    border: none;
+    bottom: 21px;
+
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffac30;
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}

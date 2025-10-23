@@ -13,12 +13,12 @@
   justify-content: center;
   align-items: center;
   gap: 25px;
-  padding: 50px 13px 38px;
+  padding: 50px 13px 25px;
   @media (min-width: $bp-tablet) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url("../img/sizes/sizes-bg-tab.webp");
-    min-height: 718px;
-    padding: 47px 90px 50px;
+    min-height: 710px;
+    padding: 47px 90px 0;
     gap: 20px;
   }
   @media (min-width: $bp-laptop) {
