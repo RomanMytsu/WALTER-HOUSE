@@ -3,24 +3,41 @@ const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menu__item");
 
 if (openMenu && menu) {
+  const open = () => {
+    menu.style.display = "flex";
+    setTimeout(() => {
+      menu.classList.add("active");
+    }, 10);
+    document.body.style.overflow = "hidden";
+  };
+
+  const close = () => {
+    menu.classList.remove("active");
+    setTimeout(() => {
+      menu.style.display = "none";
+      document.body.style.overflow = "";
+    }, 300);
+  };
+
   openMenu.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    document.body.style.overflow = menu.classList.contains("active")
-      ? "hidden"
-      : "";
+    if (menu.classList.contains("active")) {
+      close();
+    } else {
+      open();
+    }
   });
 
   menuItems.forEach((item) => {
     item.addEventListener("click", () => {
-      menu.classList.remove("active");
-      document.body.style.overflow = "";
+      close();
     });
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && menu.classList.contains("active")) {
-      menu.classList.remove("active");
-      document.body.style.overflow = "";
+      close();
     }
   });
+
+  menu.style.display = "none";
 }

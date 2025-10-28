@@ -1,0 +1,106 @@
+@use "./utils/variables.scss" as *;
+
+.services-modal {
+  position: fixed;
+  z-index: 120;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  @media (min-width: $bp-laptop) {
+    height: 250px;
+    width: 540px;
+    bottom: 0;
+    right: 0;
+  }
+  @media (min-width: $bp-desktop) {
+    width: 740px;
+    height: 380px;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__close-btn {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    @media (min-width: $bp-tablet) {
+      top: 60px;
+      right: 60px;
+    }
+    @media (min-width: $bp-laptop) {
+      display: none;
+    }
+    svg {
+      stroke: #000;
+      opacity: 0.15;
+      stroke-width: 2px;
+      width: 33px;
+      height: 34px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 126px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 120px;
+    }
+    hr {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      width: 100%;
+      margin: 27px 0 20px;
+      @media (min-width: $bp-tablet) {
+        margin: 29px 0 31px;
+      }
+    }
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffac30;
+    @media (min-width: $bp-tablet) {
+      font-size: 24px;
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 20px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #000;
+    @media (min-width: $bp-tablet) {
+      font-size: 16px;
+      line-height: 1.87;
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 14px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 16px;
+    }
+  }
+}

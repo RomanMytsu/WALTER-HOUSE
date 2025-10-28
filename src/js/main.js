@@ -5,3 +5,6 @@ import "./modules/size.js";
 import "./modules/services.js";
 import "./modules/modal/about.js";
 import "./modules/modal/size-modal-mob.js";
+import "./modules/modal/step-modal.js";
+import "./modules/modal/services-modal.js";
+import "./modules/modal/style-list-modal.js";
