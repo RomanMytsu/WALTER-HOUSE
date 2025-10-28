@@ -585,12 +585,13 @@
     text-transform: uppercase;
     text-align: center;
     color: #ffac30;
+    svg {
+      stroke: #ffac30;
+      stroke-width: 2px;
+      flex-shrink: 0;
+    }
     @media (min-width: $bp-tablet) {
       display: none;
-    }
-
-    svg {
-      flex-shrink: 0;
     }
   }
 }

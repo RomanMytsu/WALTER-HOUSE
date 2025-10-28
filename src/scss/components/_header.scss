@@ -45,6 +45,10 @@
     background-color: transparent;
     border: none;
     padding: 0;
+    svg {
+      fill: transparent;
+      stroke: #fff;
+    }
   }
   &__tel {
     display: none;

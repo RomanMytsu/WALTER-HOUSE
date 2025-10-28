@@ -7,6 +7,9 @@
 @use "./components/form.scss" as *;
 @use "./components/menu.scss" as *;
 @use "./components/call.scss";
+@use "./components/modal/about.scss" as *;
+@use "./components/modal/gallery.scss" as *;
+@use "./components/modal/size-modal-mob.scss" as *;
 
 @use "./components/main/left-panel.scss" as *;
 @use "./components/main/hero.scss";

@@ -165,6 +165,7 @@
     width: 77.5px;
     background-color: transparent;
     border: none;
+    padding: 0;
     @media (min-width: $bp-tablet) {
       width: 140px;
       gap: 5px;
@@ -210,6 +211,10 @@
         margin-right: 10px;
       }
     }
+    &:hover h3,
+    &.active h3 {
+      color: #ffac30;
+    }
   }
 
   &__line-hover-wrapper {
@@ -228,6 +233,7 @@
     hr {
       border-color: #fff;
       width: 44px;
+
       @media (min-width: $bp-tablet) {
         width: 100px;
       }
@@ -241,11 +247,50 @@
         }
       }
     }
+    span {
+      display: inline-flex;
+      padding: 8px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      transition: all 0.4s ease;
+      @media (min-width: $bp-tablet) {
+        padding: 16px;
+      }
+    }
+
     svg {
+      fill: #fff;
+      transition: all 0.4s ease;
+      border: none !important;
+
       @media (min-width: $bp-tablet) {
         width: 8px;
         height: 8px;
       }
+    }
+
+    &.hover-elite .size__dot--elite,
+    &.hover-vip .size__dot--vip,
+    &.hover-extra .size__dot--extra {
+      border-color: #ffac30;
+    }
+
+    &.hover-elite .size__line-hover-elite,
+    &.hover-elite .size__line-hover-elite-icon {
+      fill: #ffac30;
+      border: 1px solid #ffac30;
+    }
+
+    &.hover-vip .size__info-variant-hover-vip,
+    &.hover-vip .size__line-hover-vip-icon {
+      fill: #ffac30;
+      border: 1px solid #ffac30;
+    }
+
+    &.hover-extra .size__info-variant-hover-extra,
+    &.hover-extra .size__line-hover-extra-icon {
+      fill: #ffac30;
+      border: 1px solid #ffac30;
     }
   }
 

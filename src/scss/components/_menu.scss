@@ -198,6 +198,11 @@
     justify-content: start;
     flex-wrap: nowrap;
     gap: 19px;
+    svg {
+      fill: transparent;
+      stroke: #ffac30;
+      stroke-width: 2px;
+    }
     @media (min-width: $bp-tablet) {
       gap: 22px;
       align-items: flex-start;
@@ -248,6 +253,11 @@
     align-items: center;
     justify-content: start;
     gap: 30px;
+    svg {
+      fill: transparent;
+      stroke: #ffac30;
+      stroke-width: 2px;
+    }
     @media (min-width: $bp-tablet) {
       gap: 33px;
     }

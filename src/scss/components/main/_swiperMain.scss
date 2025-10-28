@@ -41,10 +41,10 @@
     transform: translateY(-50%);
 
     .swiper-pagination-bullet {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
       margin: 0 !important;
       background: none !important;
@@ -53,6 +53,8 @@
       height: auto !important;
 
       svg {
+        fill: #fff;
+        
         width: 7px;
         height: 7px;
       }
@@ -65,11 +67,14 @@
         display: none;
       }
       &.active {
+        fill: #ffac30;
         display: block;
+        padding: 9px;
+        border-radius: 100%;
+        border: 1px solid #ffac30;
         width: 25px;
         height: 25px;
       }
     }
   }
 }
-

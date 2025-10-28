@@ -23,6 +23,7 @@
     cursor: pointer;
     height: 160px;
     transition: all 0.4s ease;
+
     @media (min-width: $bp-tablet) {
       height: 192px;
     }
@@ -61,7 +62,7 @@
         rgba(255, 255, 255, 1) 50%,
         rgba(255, 255, 255, 0) 100%
       );
-      transition: opacity 0.3s ease;
+      transition: opacity 0.4s ease;
       @media (min-width: $bp-laptop) {
         background: none;
       }
@@ -76,6 +77,16 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media (min-width: $bp-laptop) {
+        &:hover {
+          .style__item-title {
+            &::after {
+              top: -70%;
+              left: -50%;
+            }
+          }
+        }
+      }
     }
     &.style__item-vip {
       background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
@@ -83,6 +94,16 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media (min-width: $bp-laptop) {
+        &:hover {
+          .style__item-title {
+            &::after {
+              top: -70%;
+              left: -100%;
+            }
+          }
+        }
+      }
     }
     &.style__item-extra {
       background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
@@ -90,6 +111,16 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media (min-width: $bp-laptop) {
+        &:hover {
+          .style__item-title {
+            &::after {
+              top: -70%;
+              left: -20%;
+            }
+          }
+        }
+      }
     }
 
     &-title {
@@ -101,12 +132,206 @@
       text-transform: uppercase;
       text-align: center;
       color: #fff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: url("../img/style/circle.svg") no-repeat center / contain;
+        opacity: 0;
+        @media (min-width: $bp-tablet) {
+          height: 108px;
+        }
+        @media (min-width: $bp-laptop) {
+          width: 340px;
+          height: 108px;
+          transform: rotate(-90deg);
+          // top: -70%;
+          // left: -20%;
+        }
+      }
+
       @media (min-width: $bp-tablet) {
         font-size: 36px;
       }
     }
-  }
-  &__item-hover {
-    display: none;
+
+    &-hover {
+      display: none;
+      transition: all 0.4s ease;
+      @media (min-width: $bp-laptop) {
+        flex-direction: column;
+        align-items: stretch;
+        margin-right: 60px;
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.71;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        transition: all 0.4s ease;
+        @media (min-width: $bp-tablet) {
+          font-size: 16px;
+        }
+        @media (min-width: $bp-laptop) {
+          font-size: 18px;
+          line-height: 1.67;
+        }
+      }
+      &-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.4s ease;
+        @media (min-width: $bp-laptop) {
+          gap: 69px;
+        }
+
+        button {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          svg {
+            fill: transparent;
+            stroke: #ffac30;
+            flex-shrink: 0;
+          }
+          @media (min-width: $bp-tablet) {
+            align-items: stretch;
+            gap: 38px;
+          }
+        }
+
+        &-gall {
+          p {
+            display: none;
+            font-family: "OpenSans", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.45em;
+            text-transform: uppercase;
+            color: #ffac30;
+            transition: color 0.4s ease;
+          }
+          &:hover {
+            p {
+              color: #fff;
+            }
+            svg {
+              stroke: #fff;
+            }
+          }
+        }
+
+        &-services {
+          display: none;
+          @media (min-width: $bp-laptop) {
+          }
+          p {
+            display: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.45em;
+            text-transform: uppercase;
+            color: #fff;
+            transition: color 0.4s ease;
+          }
+          svg {
+            display: none;
+          }
+          &:hover {
+            p {
+              color: #ffac30;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      height: 480px;
+      gap: 67px;
+      @media (min-width: $bp-tablet) {
+        height: 576px;
+        gap: 142px;
+      }
+      @media (min-width: $bp-laptop) {
+        padding: 0 100px;
+        height: 100%;
+        flex: 0 0 720px;
+        gap: 126px;
+      }
+      @media (min-width: $bp-desktop) {
+        flex: 0 0 980px;
+      }
+
+      .style__item-title {
+        &::after {
+          opacity: 1;
+        }
+        @media (min-width: $bp-laptop) {
+          width: 140px;
+          color: #ffac30;
+        }
+      }
+      .style__item-hover {
+        display: block;
+        padding: 0 20px;
+        @media (min-width: $bp-tablet) {
+          padding: 0 109px;
+        }
+        @media (min-width: $bp-laptop) {
+          padding: 0;
+        }
+
+        &-text {
+          margin-bottom: 47px;
+          @media (min-width: $bp-tablet) {
+            margin-bottom: 92px;
+          }
+          @media (min-width: $bp-laptop) {
+            margin-bottom: 57px;
+          }
+        }
+
+        &-btn {
+          &-gall {
+            p {
+              display: none;
+              @media (min-width: $bp-tablet) {
+                display: block;
+              }
+            }
+          }
+          &-services {
+            display: none;
+            @media (min-width: $bp-laptop) {
+              display: flex;
+            }
+            p {
+              display: none;
+              @media (min-width: $bp-laptop) {
+                display: block;
+                white-space: nowrap;
+              }
+            }
+            svg {
+              display: none;
+              @media (min-width: $bp-laptop) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

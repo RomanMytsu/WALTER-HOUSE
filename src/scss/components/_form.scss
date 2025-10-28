@@ -1,6 +1,5 @@
 @use "../utils/variables.scss" as *;
 .main-form-wrapper {
-  
   @media (min-width: $bp-laptop) {
     position: fixed;
     bottom: 0;
@@ -104,6 +103,11 @@
     text-transform: uppercase;
     color: #ffac30;
     text-align: left;
+    svg {
+      fill: transparent;
+      stroke: #ffac30;
+      stroke-width: 2px;
+    }
     @media (min-width: $bp-tablet) {
       justify-content: space-between;
       gap: 25px;

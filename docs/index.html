@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="img/logo-icon.svg?v=2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20251024164242" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20251028113656" />
   <title>WALTER HOUSE</title>
 </head>
 
@@ -26,7 +26,7 @@
       <p class="header__call-text">request for a call</p>
       <button class="header__call-btn">
         <svg class="header__call-icon" width="60" height="60">
-          <use href="img/icons.svg#header--call-icon"></use>
+          <use href="img/header/call-icon.svg"></use>
         </svg>
       </button>
     </div>
@@ -368,26 +368,34 @@
         </div>
         <div class="size__line-hover-wrapper">
           <hr class="size__line-hover-elite" />
-          <svg width="5" height="5" class="size__line-hover-elite-icon">
-            <use href="img/icons.svg#sizes--dot"></use>
-          </svg>
+          <span class="size__dot size__dot--elite">
+            <svg width="5" height="5" class="size__line-hover-elite-icon">
+              <use href="img/icons.svg#sizes--dot"></use>
+            </svg>
+          </span>
           <hr
             class="size__info-variant-hover-elite size__info-variant-hover-vip"
           />
-          <svg width="5" height="5" class="size__line-hover-vip-icon">
-            <use href="img/icons.svg#sizes--dot"></use>
-          </svg>
+          <span class="size__dot size__dot--vip">
+            <svg width="5" height="5" class="size__line-hover-vip-icon">
+              <use href="img/icons.svg#sizes--dot"></use>
+            </svg>
+          </span>
+
           <hr
             class="size__info-variant-hover-vip size__info-variant-hover-extra"
           />
-          <svg width="5" height="5" class="size__line-hover-extra-icon">
-            <use href="img/icons.svg#sizes--dot"></use>
-          </svg>
+          <span class="size__dot size__dot--extra">
+            <svg width="5" height="5" class="size__line-hover-extra-icon">
+              <use href="img/icons.svg#sizes--dot"></use>
+            </svg>
+          </span>
+
           <hr class="size__info-variant-hover-extra" />
         </div>
       </div>
       <div class="size__price-wrapper">
-        <p class="size__price-num">233 000</p>
+        <p class="size__price-num"></p>
         <span>uan</span>
       </div>
     </div>
@@ -501,6 +509,117 @@
         <div class="swiper-pagination-main"></div>
       </div>
     </main>
-    <script src="js/main.min.js?_v=20251024164242"></script>
+    <div class="modal-about">
+  <div class="modal-about__content">
+    <div class="modal-about__content-img">
+      <img
+        width="344"
+        height="310"
+        src="img/about/about-modal-logo.webp"
+        alt="logo"
+      />
+      <div class="hero__text-title-wrapp">
+        <h1 class="hero__title-walter">walter</h1>
+        <p class="hero__subtitle">your personal</p>
+        <h1 class="hero__title-house">house</h1>
+      </div>
+    </div>
+    <div class="modal-about__content-text-wrapper">
+      <h2 class="modal-about__content-text-title">
+        Place for a short slogan here Place for a short slogan here
+      </h2>
+      <ul class="modal-about__content-text-list">
+        <li class="modal-about__content-text-item">
+          <h3 class="modal-about__content-text-item-title">
+            Place for a subheading
+          </h3>
+          <p>
+            <span>The importance of these problems is so obvious,</span> that
+            the new model of organizational activity contributes to the
+            preparation and implementation of development forms. It should not
+            be forgotten, however, that the framework and place of training
+            contributes to the preparation and implementation of new proposals.
+            Daily practice shows that the constant advocacy of our activities
+            requires the definition and clarification of the relevant conditions
+            of revitalization. Translated with DeepL.com (free version)
+          </p>
+        </li>
+        <li class="modal-about__content-text-item">
+          <h3 class="modal-about__content-text-item-title">
+            Place for a subheading
+          </h3>
+          <p>
+            <span>The importance of these problems is so obvious,</span> that
+            the new model of organizational activity contributes to the
+            preparation and implementation of development forms. It should not
+            be forgotten, however, that the framework and place of training
+            contributes to the preparation and implementation of new proposals.
+            Daily practice shows that the constant advocacy of our activities
+            requires the definition and clarification of the relevant conditions
+            of revitalization. Translated with DeepL.com (free version)
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+  <button class="modal-about__back-home-btn">
+    back to main page
+    <svg width="135" height="21">
+      <use href="img/icons.svg#call--arrow-call"></use>
+    </svg>
+  </button>
+</div>
+
+    <div class="gallery gallery-modal">
+  
+</div>
+
+    <div class="size-modal-mob">
+  <button class="size-modal-mob__close-btn">
+    <svg width="21" height="21">
+      <use href="img/icons.svg#sizes--close-modal"></use>
+    </svg>
+  </button>
+  <div class="size-modal-mob__info">
+    <h2 class="size-modal-mob__info-title">
+      <span></span>
+      Style
+    </h2>
+    <hr />
+    <div class="size-modal-mob__info-desc">
+      <p></p>
+      <ul>
+        <li>Dismantling and Erection of interior partitions</li>
+        <li>
+          Leveling of walls under the beacon, finishing of walls under wallpaper
+        </li>
+        <li>Making 90 degree angles</li>
+        <li>Electrical installation works (according to the project)</li>
+        <li>Installation of low-current wiring (internet, antenna)</li>
+        <li>Installation of water supply and sewerage</li>
+        <li>Waterproofing of wet areas</li>
+        <li>Pouring floor screed (up to 10 cm, sandcrete/ceramzite)</li>
+        <li>Preparation of walls for wallpapering</li>
+        <li>Wallpaper pasting</li>
+        <li>Laying laminate flooring on a carpet pad</li>
+        <li>
+          Laying of tiles on the floor and walls in the bathroom and toilet (up
+          to 5m2 on the floor)
+        </li>
+        <li>Installation of PVC floor skirting board</li>
+        <li>Stretch ceiling</li>
+        <li>Interior door installation</li>
+        <li>Installation of a bathtub / shower cabin</li>
+        <li>Mounting the sink</li>
+        <li>Installation of the revision hatch in the riser pipe</li>
+        <li>GKL ceiling installation</li>
+        <li>Cleaning after renovation</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <script src="js/main.min.js?_v=20251028113656"></script>
   </body>
 </html>

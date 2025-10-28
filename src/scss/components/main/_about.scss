@@ -123,5 +123,10 @@
     letter-spacing: 0.45em;
     text-transform: uppercase;
     color: #fff;
+    svg {
+      fill: transparent;
+      stroke: #ffac30;
+      stroke-width: 2px;
+    }
   }
 }
