@@ -1,1 +1,132 @@
 @use "./utils/variables.scss" as *;
+
+.style-list-modal {
+  position: fixed;
+  display: none;
+  z-index: 120;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-color: #fff;
+  transform: translateX(100%);
+
+  transition: all 0.4s ease;
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    svg {
+      fill: transparent;
+      stroke: rgba(0, 0, 0, 0.15);
+      stroke-width: 2px;
+      flex-grow: 0;
+      transition: stroke 0.4s ease;
+    }
+    &:hover {
+      svg {
+        stroke: rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    padding: 95px 70px 95px 70px;
+    @media (min-width: $bp-desktop) {
+      padding: 195px 170px 314px 212px;
+      gap: 130px;
+    }
+  }
+  &__title {
+    position: relative;
+    font-family: "BrunoAce", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffac30;
+    padding: 80px;
+    margin: auto 0;
+    @media (min-width: $bp-desktop) {
+      font-size: 36px;
+      padding: 100px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 100%;
+      height: 100%;
+      background: url("../img/style/circle-modal.svg") no-repeat center /
+        contain;
+      stroke: rgba(0, 0, 0, 0.15);
+      stroke-width: 2px;
+    }
+  }
+
+  &__text-list-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    hr {
+      border: 2px solid rgba(0, 0, 0, 0.15);
+      width: 100%;
+      margin: 26px 0 53px;
+    }
+  }
+  &__wrapper-subtitle {
+    font-family: "BrunoAce", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    @media (min-width: $bp-desktop) {
+      font-size: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    @media (min-width: $bp-desktop) {
+      gap: 30px 70px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 50px;
+    width: 350px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #000;
+    @media (min-width: $bp-desktop) {
+      font-size: 16px;
+      width: 500px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #ffac30;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      top: 7px;
+      border-radius: 50%;
+    }
+  }
+}
