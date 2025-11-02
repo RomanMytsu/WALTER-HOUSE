@@ -2,9 +2,8 @@
 <html lang="en">
   @@include('components/head.html', { "title":"WALTER HOUSE" })
   <body>
-    @@include('components/header.html', {}) @@include('components/menu.html',
-    {}) @@include('components/main/left-panel.html', {})
-    @@include('components/call.html', {})
+    @@include('components/header.html', {})
+    @@include('components/main/left-panel.html', {})
     <main>
       <div class="swiper-main">
         <div class="swiper-wrapper">
@@ -18,8 +17,10 @@
         <div class="swiper-pagination-main"></div>
       </div>
     </main>
+    @@include('components/menu.html', {}) @@include('components/call.html', {})
     @@include('components/modal/about.html', {})
     @@include('components/modal/gallery.html', {})
+    @@include('components/modal/gallery-mob.html', {})
     @@include('components/modal/size-modal-mob.html', {})
     @@include('components/modal/step-modal.html', {})
     @@include('components/modal/services-modal.html', {})

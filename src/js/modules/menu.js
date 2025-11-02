@@ -4,10 +4,10 @@ const menuItems = document.querySelectorAll(".menu__item");
 
 if (openMenu && menu) {
   const open = () => {
-    menu.style.display = "flex";
+    menu.style.display = "block";
     setTimeout(() => {
       menu.classList.add("active");
-    }, 10);
+    }, 20);
     document.body.style.overflow = "hidden";
   };
 
@@ -16,7 +16,7 @@ if (openMenu && menu) {
     setTimeout(() => {
       menu.style.display = "none";
       document.body.style.overflow = "";
-    }, 300);
+    }, 400);
   };
 
   openMenu.addEventListener("click", () => {

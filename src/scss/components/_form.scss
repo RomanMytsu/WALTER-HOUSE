@@ -12,6 +12,14 @@
     display: block;
   }
 }
+.gallery__form {
+  @media (min-width: $bp-laptop) {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
 .form {
   width: 100%;
   padding: 45px 40px 55px 40px;

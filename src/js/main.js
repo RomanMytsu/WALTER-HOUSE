@@ -8,3 +8,5 @@ import "./modules/modal/size-modal-mob.js";
 import "./modules/modal/step-modal.js";
 import "./modules/modal/services-modal.js";
 import "./modules/modal/style-list-modal.js";
+import "./modules/modal/gallery.js";
+import "./modules/modal/gallery-mob-modal.js";
