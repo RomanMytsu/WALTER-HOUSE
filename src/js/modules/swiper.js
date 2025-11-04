@@ -15,9 +15,9 @@ if (swiperMainEl) {
         direction: "vertical",
         effect: "fade",
         fadeEffect: {
-          crossFade: true, // плавное перекрытие между слайдами
+          crossFade: true,
         },
-        speed: 1000, // скорость перехода (в мс) — можно менять (500–1500 красиво)
+        speed: 1000,
         keyboard: { enabled: true, onlyInViewport: true },
         mousewheel: true,
         modules: [Pagination, Keyboard, Mousewheel, EffectFade],
@@ -26,6 +26,7 @@ if (swiperMainEl) {
         observer: true,
         observeParents: true,
         loop: false,
+        grabCursor: true,
 
         pagination: {
           el: ".swiper-pagination-main",

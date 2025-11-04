@@ -34,6 +34,36 @@
       transform: translateX(0);
     }
 
+    &__back-home-btn {
+      position: absolute;
+      right: 178px;
+      top: 100px;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 0;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      transition: color 0.4s ease;
+      svg {
+        fill: transparent;
+        stroke: #fff;
+        stroke-width: 2px;
+        transition: stroke 0.4s ease;
+      }
+      &:hover {
+        color: #ffac30;
+        svg {
+          stroke: #ffac30;
+        }
+      }
+    }
+
     &__title {
       font-weight: 700;
       font-size: 28px;

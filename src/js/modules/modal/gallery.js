@@ -19,6 +19,7 @@ if (swiperGalleryVip) {
       observer: true,
       observeParents: true,
       loop: false,
+      grabCursor: true,
       navigation: {
         nextEl: ".gallery__btn-next",
         prevEl: ".gallery__btn-prev",

@@ -1,5 +1,5 @@
 const btnOpenSteps = document.querySelector(".step__content-title");
-const btnCloseSteps = document.querySelector(".step-modal__back-btn");
+const btnCloseSteps = document.querySelector(".step-modal__back-home-btn");
 const modalSteps = document.querySelector(".step-modal");
 
 if (modalSteps) {
